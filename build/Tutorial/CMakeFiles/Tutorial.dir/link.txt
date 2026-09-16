@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Tutorial.dir/Tutorial.cxx.o -o Tutorial  -Wl,-rpath,/home/gabriel/cmake/EjemploClase/build/MathFunctions ../MathFunctions/libMathFunctions.so 
