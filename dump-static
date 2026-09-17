@@ -1,0 +1,505 @@
+
+tutorial-static:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000001000 <_init>:
+    1000:	f3 0f 1e fa          	endbr64
+    1004:	48 83 ec 08          	sub    $0x8,%rsp
+    1008:	48 8b 05 e1 2f 00 00 	mov    0x2fe1(%rip),%rax        # 3ff0 <__gmon_start__>
+    100f:	48 85 c0             	test   %rax,%rax
+    1012:	74 02                	je     1016 <_init+0x16>
+    1014:	ff d0                	call   *%rax
+    1016:	48 83 c4 08          	add    $0x8,%rsp
+    101a:	c3                   	ret
+
+Disassembly of section .plt:
+
+0000000000001020 <_ZNSo3putEc@plt-0x10>:
+    1020:	ff 35 02 2f 00 00    	push   0x2f02(%rip)        # 3f28 <_GLOBAL_OFFSET_TABLE_+0x8>
+    1026:	ff 25 04 2f 00 00    	jmp    *0x2f04(%rip)        # 3f30 <_GLOBAL_OFFSET_TABLE_+0x10>
+    102c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001030 <_ZNSo3putEc@plt>:
+    1030:	ff 25 02 2f 00 00    	jmp    *0x2f02(%rip)        # 3f38 <_ZNSo3putEc@GLIBCXX_3.4>
+    1036:	68 00 00 00 00       	push   $0x0
+    103b:	e9 e0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001040 <__errno_location@plt>:
+    1040:	ff 25 fa 2e 00 00    	jmp    *0x2efa(%rip)        # 3f40 <__errno_location@GLIBC_2.2.5>
+    1046:	68 01 00 00 00       	push   $0x1
+    104b:	e9 d0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001050 <strlen@plt>:
+    1050:	ff 25 f2 2e 00 00    	jmp    *0x2ef2(%rip)        # 3f48 <strlen@GLIBC_2.2.5>
+    1056:	68 02 00 00 00       	push   $0x2
+    105b:	e9 c0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001060 <_ZSt24__throw_invalid_argumentPKc@plt>:
+    1060:	ff 25 ea 2e 00 00    	jmp    *0x2eea(%rip)        # 3f50 <_ZSt24__throw_invalid_argumentPKc@GLIBCXX_3.4>
+    1066:	68 03 00 00 00       	push   $0x3
+    106b:	e9 b0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001070 <_ZNSo5flushEv@plt>:
+    1070:	ff 25 e2 2e 00 00    	jmp    *0x2ee2(%rip)        # 3f58 <_ZNSo5flushEv@GLIBCXX_3.4>
+    1076:	68 04 00 00 00       	push   $0x4
+    107b:	e9 a0 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001080 <_ZSt19__throw_logic_errorPKc@plt>:
+    1080:	ff 25 da 2e 00 00    	jmp    *0x2eda(%rip)        # 3f60 <_ZSt19__throw_logic_errorPKc@GLIBCXX_3.4>
+    1086:	68 05 00 00 00       	push   $0x5
+    108b:	e9 90 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001090 <strtod@plt>:
+    1090:	ff 25 d2 2e 00 00    	jmp    *0x2ed2(%rip)        # 3f68 <strtod@GLIBC_2.2.5>
+    1096:	68 06 00 00 00       	push   $0x6
+    109b:	e9 80 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010a0 <memcpy@plt>:
+    10a0:	ff 25 ca 2e 00 00    	jmp    *0x2eca(%rip)        # 3f70 <memcpy@GLIBC_2.14>
+    10a6:	68 07 00 00 00       	push   $0x7
+    10ab:	e9 70 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010b0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>:
+    10b0:	ff 25 c2 2e 00 00    	jmp    *0x2ec2(%rip)        # 3f78 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@GLIBCXX_3.4>
+    10b6:	68 08 00 00 00       	push   $0x8
+    10bb:	e9 60 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010c0 <__stack_chk_fail@plt>:
+    10c0:	ff 25 ba 2e 00 00    	jmp    *0x2eba(%rip)        # 3f80 <__stack_chk_fail@GLIBC_2.4>
+    10c6:	68 09 00 00 00       	push   $0x9
+    10cb:	e9 50 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010d0 <_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@plt>:
+    10d0:	ff 25 b2 2e 00 00    	jmp    *0x2eb2(%rip)        # 3f88 <_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@GLIBCXX_3.4.9>
+    10d6:	68 0a 00 00 00       	push   $0xa
+    10db:	e9 40 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010e0 <_ZNKSt5ctypeIcE13_M_widen_initEv@plt>:
+    10e0:	ff 25 aa 2e 00 00    	jmp    *0x2eaa(%rip)        # 3f90 <_ZNKSt5ctypeIcE13_M_widen_initEv@GLIBCXX_3.4.11>
+    10e6:	68 0b 00 00 00       	push   $0xb
+    10eb:	e9 30 ff ff ff       	jmp    1020 <_init+0x20>
+
+00000000000010f0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt>:
+    10f0:	ff 25 a2 2e 00 00    	jmp    *0x2ea2(%rip)        # 3f98 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@GLIBCXX_3.4.21>
+    10f6:	68 0c 00 00 00       	push   $0xc
+    10fb:	e9 20 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001100 <_ZSt16__throw_bad_castv@plt>:
+    1100:	ff 25 9a 2e 00 00    	jmp    *0x2e9a(%rip)        # 3fa0 <_ZSt16__throw_bad_castv@GLIBCXX_3.4>
+    1106:	68 0d 00 00 00       	push   $0xd
+    110b:	e9 10 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001110 <_ZSt20__throw_out_of_rangePKc@plt>:
+    1110:	ff 25 92 2e 00 00    	jmp    *0x2e92(%rip)        # 3fa8 <_ZSt20__throw_out_of_rangePKc@GLIBCXX_3.4>
+    1116:	68 0e 00 00 00       	push   $0xe
+    111b:	e9 00 ff ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001120 <_ZNSo9_M_insertIdEERSoT_@plt>:
+    1120:	ff 25 8a 2e 00 00    	jmp    *0x2e8a(%rip)        # 3fb0 <_ZNSo9_M_insertIdEERSoT_@GLIBCXX_3.4.9>
+    1126:	68 0f 00 00 00       	push   $0xf
+    112b:	e9 f0 fe ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001130 <_Unwind_Resume@plt>:
+    1130:	ff 25 82 2e 00 00    	jmp    *0x2e82(%rip)        # 3fb8 <_Unwind_Resume@GCC_3.0>
+    1136:	68 10 00 00 00       	push   $0x10
+    113b:	e9 e0 fe ff ff       	jmp    1020 <_init+0x20>
+
+0000000000001140 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm@plt>:
+    1140:	ff 25 7a 2e 00 00    	jmp    *0x2e7a(%rip)        # 3fc0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm@GLIBCXX_3.4.21>
+    1146:	68 11 00 00 00       	push   $0x11
+    114b:	e9 d0 fe ff ff       	jmp    1020 <_init+0x20>
+
+Disassembly of section .plt.got:
+
+0000000000001150 <__cxa_finalize@plt>:
+    1150:	ff 25 72 2e 00 00    	jmp    *0x2e72(%rip)        # 3fc8 <__cxa_finalize@GLIBC_2.2.5>
+    1156:	66 90                	xchg   %ax,%ax
+
+Disassembly of section .text:
+
+0000000000001160 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0.cold>:
+    1160:	e8 9b ff ff ff       	call   1100 <_ZSt16__throw_bad_castv@plt>
+
+0000000000001165 <main.cold>:
+    1165:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+    1169:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    1170:	00 00 
+    1172:	75 47                	jne    11bb <main.cold+0x56>
+    1174:	48 8d 3d d5 0e 00 00 	lea    0xed5(%rip),%rdi        # 2050 <_IO_stdin_used+0x50>
+    117b:	e8 00 ff ff ff       	call   1080 <_ZSt19__throw_logic_errorPKc@plt>
+    1180:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+    1184:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    118b:	00 00 
+    118d:	75 27                	jne    11b6 <main.cold+0x51>
+    118f:	48 8d 3d 7e 0e 00 00 	lea    0xe7e(%rip),%rdi        # 2014 <_IO_stdin_used+0x14>
+    1196:	e8 c5 fe ff ff       	call   1060 <_ZSt24__throw_invalid_argumentPKc@plt>
+    119b:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+    119f:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    11a6:	00 00 
+    11a8:	75 16                	jne    11c0 <main.cold+0x5b>
+    11aa:	48 8d 3d 63 0e 00 00 	lea    0xe63(%rip),%rdi        # 2014 <_IO_stdin_used+0x14>
+    11b1:	e8 5a ff ff ff       	call   1110 <_ZSt20__throw_out_of_rangePKc@plt>
+    11b6:	e8 05 ff ff ff       	call   10c0 <__stack_chk_fail@plt>
+    11bb:	e8 00 ff ff ff       	call   10c0 <__stack_chk_fail@plt>
+    11c0:	e8 fb fe ff ff       	call   10c0 <__stack_chk_fail@plt>
+    11c5:	49 89 c4             	mov    %rax,%r12
+    11c8:	83 3b 00             	cmpl   $0x0,(%rbx)
+    11cb:	75 03                	jne    11d0 <main.cold+0x6b>
+    11cd:	44 89 3b             	mov    %r15d,(%rbx)
+    11d0:	48 8d 7d a0          	lea    -0x60(%rbp),%rdi
+    11d4:	e8 17 ff ff ff       	call   10f0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt>
+    11d9:	48 8b 45 c8          	mov    -0x38(%rbp),%rax
+    11dd:	64 48 2b 04 25 28 00 	sub    %fs:0x28,%rax
+    11e4:	00 00 
+    11e6:	75 08                	jne    11f0 <main.cold+0x8b>
+    11e8:	4c 89 e7             	mov    %r12,%rdi
+    11eb:	e8 40 ff ff ff       	call   1130 <_Unwind_Resume@plt>
+    11f0:	e8 cb fe ff ff       	call   10c0 <__stack_chk_fail@plt>
+
+00000000000011f5 <_ZN13mathfunctions4sqrtEd.cold>:
+    11f5:	e8 06 ff ff ff       	call   1100 <_ZSt16__throw_bad_castv@plt>
+    11fa:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+
+0000000000001200 <main>:
+    1200:	55                   	push   %rbp
+    1201:	48 89 e5             	mov    %rsp,%rbp
+    1204:	41 57                	push   %r15
+    1206:	41 56                	push   %r14
+    1208:	41 55                	push   %r13
+    120a:	41 54                	push   %r12
+    120c:	53                   	push   %rbx
+    120d:	48 83 ec 48          	sub    $0x48,%rsp
+    1211:	64 48 8b 1c 25 28 00 	mov    %fs:0x28,%rbx
+    1218:	00 00 
+    121a:	48 89 5d c8          	mov    %rbx,-0x38(%rbp)
+    121e:	48 89 f3             	mov    %rsi,%rbx
+    1221:	83 ff 01             	cmp    $0x1,%edi
+    1224:	0f 8e 46 01 00 00    	jle    1370 <main+0x170>
+    122a:	4c 8b 63 08          	mov    0x8(%rbx),%r12
+    122e:	4c 8d 7d b0          	lea    -0x50(%rbp),%r15
+    1232:	4c 89 7d a0          	mov    %r15,-0x60(%rbp)
+    1236:	4d 85 e4             	test   %r12,%r12
+    1239:	0f 84 26 ff ff ff    	je     1165 <main.cold>
+    123f:	4c 89 e7             	mov    %r12,%rdi
+    1242:	e8 09 fe ff ff       	call   1050 <strlen@plt>
+    1247:	48 89 45 98          	mov    %rax,-0x68(%rbp)
+    124b:	48 89 c3             	mov    %rax,%rbx
+    124e:	48 83 f8 0f          	cmp    $0xf,%rax
+    1252:	0f 87 e7 00 00 00    	ja     133f <main+0x13f>
+    1258:	48 83 f8 01          	cmp    $0x1,%rax
+    125c:	0f 85 4d 01 00 00    	jne    13af <main+0x1af>
+    1262:	41 0f b6 04 24       	movzbl (%r12),%eax
+    1267:	4c 8d 6d 98          	lea    -0x68(%rbp),%r13
+    126b:	88 45 b0             	mov    %al,-0x50(%rbp)
+    126e:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+    1272:	48 8b 55 a0          	mov    -0x60(%rbp),%rdx
+    1276:	48 89 45 a8          	mov    %rax,-0x58(%rbp)
+    127a:	c6 04 02 00          	movb   $0x0,(%rdx,%rax,1)
+    127e:	4c 8b 65 a0          	mov    -0x60(%rbp),%r12
+    1282:	e8 b9 fd ff ff       	call   1040 <__errno_location@plt>
+    1287:	4c 89 ee             	mov    %r13,%rsi
+    128a:	4c 89 e7             	mov    %r12,%rdi
+    128d:	44 8b 38             	mov    (%rax),%r15d
+    1290:	c7 00 00 00 00 00    	movl   $0x0,(%rax)
+    1296:	48 89 c3             	mov    %rax,%rbx
+    1299:	e8 f2 fd ff ff       	call   1090 <strtod@plt>
+    129e:	66 49 0f 7e c5       	movq   %xmm0,%r13
+    12a3:	4c 3b 65 98          	cmp    -0x68(%rbp),%r12
+    12a7:	0f 84 d3 fe ff ff    	je     1180 <main.cold+0x1b>
+    12ad:	8b 03                	mov    (%rbx),%eax
+    12af:	83 f8 22             	cmp    $0x22,%eax
+    12b2:	0f 84 e3 fe ff ff    	je     119b <main.cold+0x36>
+    12b8:	85 c0                	test   %eax,%eax
+    12ba:	75 03                	jne    12bf <main+0xbf>
+    12bc:	44 89 3b             	mov    %r15d,(%rbx)
+    12bf:	48 8d 7d a0          	lea    -0x60(%rbp),%rdi
+    12c3:	e8 28 fe ff ff       	call   10f0 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE10_M_disposeEv@plt>
+    12c8:	66 49 0f 6e c5       	movq   %r13,%xmm0
+    12cd:	e8 7e 02 00 00       	call   1550 <_ZN13mathfunctions4sqrtEd>
+    12d2:	48 8b 3d 07 2d 00 00 	mov    0x2d07(%rip),%rdi        # 3fe0 <_ZSt4cout@GLIBCXX_3.4>
+    12d9:	48 8d 35 39 0d 00 00 	lea    0xd39(%rip),%rsi        # 2019 <_IO_stdin_used+0x19>
+    12e0:	66 48 0f 7e c3       	movq   %xmm0,%rbx
+    12e5:	e8 c6 fd ff ff       	call   10b0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    12ea:	66 49 0f 6e c5       	movq   %r13,%xmm0
+    12ef:	48 89 c7             	mov    %rax,%rdi
+    12f2:	e8 29 fe ff ff       	call   1120 <_ZNSo9_M_insertIdEERSoT_@plt>
+    12f7:	48 8d 35 2f 0d 00 00 	lea    0xd2f(%rip),%rsi        # 202d <_IO_stdin_used+0x2d>
+    12fe:	48 89 c7             	mov    %rax,%rdi
+    1301:	e8 aa fd ff ff       	call   10b0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1306:	66 48 0f 6e c3       	movq   %rbx,%xmm0
+    130b:	48 89 c7             	mov    %rax,%rdi
+    130e:	e8 0d fe ff ff       	call   1120 <_ZNSo9_M_insertIdEERSoT_@plt>
+    1313:	48 89 c7             	mov    %rax,%rdi
+    1316:	e8 a5 01 00 00       	call   14c0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0>
+    131b:	31 c0                	xor    %eax,%eax
+    131d:	48 8b 55 c8          	mov    -0x38(%rbp),%rdx
+    1321:	64 48 2b 14 25 28 00 	sub    %fs:0x28,%rdx
+    1328:	00 00 
+    132a:	0f 85 91 00 00 00    	jne    13c1 <main+0x1c1>
+    1330:	48 83 c4 48          	add    $0x48,%rsp
+    1334:	5b                   	pop    %rbx
+    1335:	41 5c                	pop    %r12
+    1337:	41 5d                	pop    %r13
+    1339:	41 5e                	pop    %r14
+    133b:	41 5f                	pop    %r15
+    133d:	5d                   	pop    %rbp
+    133e:	c3                   	ret
+    133f:	4c 8d 6d 98          	lea    -0x68(%rbp),%r13
+    1343:	48 8d 7d a0          	lea    -0x60(%rbp),%rdi
+    1347:	31 d2                	xor    %edx,%edx
+    1349:	4c 89 ee             	mov    %r13,%rsi
+    134c:	e8 ef fd ff ff       	call   1140 <_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE9_M_createERmm@plt>
+    1351:	48 89 45 a0          	mov    %rax,-0x60(%rbp)
+    1355:	48 89 c7             	mov    %rax,%rdi
+    1358:	48 8b 45 98          	mov    -0x68(%rbp),%rax
+    135c:	48 89 45 b0          	mov    %rax,-0x50(%rbp)
+    1360:	48 89 da             	mov    %rbx,%rdx
+    1363:	4c 89 e6             	mov    %r12,%rsi
+    1366:	e8 35 fd ff ff       	call   10a0 <memcpy@plt>
+    136b:	e9 fe fe ff ff       	jmp    126e <main+0x6e>
+    1370:	48 8b 3d 69 2c 00 00 	mov    0x2c69(%rip),%rdi        # 3fe0 <_ZSt4cout@GLIBCXX_3.4>
+    1377:	48 8d 35 86 0c 00 00 	lea    0xc86(%rip),%rsi        # 2004 <_IO_stdin_used+0x4>
+    137e:	e8 2d fd ff ff       	call   10b0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    1383:	48 8b 33             	mov    (%rbx),%rsi
+    1386:	48 89 c7             	mov    %rax,%rdi
+    1389:	e8 22 fd ff ff       	call   10b0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    138e:	48 8d 35 77 0c 00 00 	lea    0xc77(%rip),%rsi        # 200c <_IO_stdin_used+0xc>
+    1395:	48 89 c7             	mov    %rax,%rdi
+    1398:	e8 13 fd ff ff       	call   10b0 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+    139d:	48 89 c7             	mov    %rax,%rdi
+    13a0:	e8 1b 01 00 00       	call   14c0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0>
+    13a5:	b8 01 00 00 00       	mov    $0x1,%eax
+    13aa:	e9 6e ff ff ff       	jmp    131d <main+0x11d>
+    13af:	4c 8d 6d 98          	lea    -0x68(%rbp),%r13
+    13b3:	48 85 c0             	test   %rax,%rax
+    13b6:	0f 84 b2 fe ff ff    	je     126e <main+0x6e>
+    13bc:	4c 89 ff             	mov    %r15,%rdi
+    13bf:	eb 9f                	jmp    1360 <main+0x160>
+    13c1:	e8 fa fc ff ff       	call   10c0 <__stack_chk_fail@plt>
+    13c6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    13cd:	00 00 00 
+
+00000000000013d0 <_start>:
+    13d0:	f3 0f 1e fa          	endbr64
+    13d4:	31 ed                	xor    %ebp,%ebp
+    13d6:	49 89 d1             	mov    %rdx,%r9
+    13d9:	5e                   	pop    %rsi
+    13da:	48 89 e2             	mov    %rsp,%rdx
+    13dd:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    13e1:	50                   	push   %rax
+    13e2:	54                   	push   %rsp
+    13e3:	45 31 c0             	xor    %r8d,%r8d
+    13e6:	31 c9                	xor    %ecx,%ecx
+    13e8:	48 8d 3d 11 fe ff ff 	lea    -0x1ef(%rip),%rdi        # 1200 <main>
+    13ef:	ff 15 db 2b 00 00    	call   *0x2bdb(%rip)        # 3fd0 <__libc_start_main@GLIBC_2.34>
+    13f5:	f4                   	hlt
+    13f6:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    13fd:	00 00 00 
+
+0000000000001400 <deregister_tm_clones>:
+    1400:	48 8d 3d 11 2c 00 00 	lea    0x2c11(%rip),%rdi        # 4018 <__TMC_END__>
+    1407:	48 8d 05 0a 2c 00 00 	lea    0x2c0a(%rip),%rax        # 4018 <__TMC_END__>
+    140e:	48 39 f8             	cmp    %rdi,%rax
+    1411:	74 15                	je     1428 <deregister_tm_clones+0x28>
+    1413:	48 8b 05 ce 2b 00 00 	mov    0x2bce(%rip),%rax        # 3fe8 <_ITM_deregisterTMCloneTable>
+    141a:	48 85 c0             	test   %rax,%rax
+    141d:	74 09                	je     1428 <deregister_tm_clones+0x28>
+    141f:	ff e0                	jmp    *%rax
+    1421:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    1428:	c3                   	ret
+    1429:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001430 <register_tm_clones>:
+    1430:	48 8d 3d e1 2b 00 00 	lea    0x2be1(%rip),%rdi        # 4018 <__TMC_END__>
+    1437:	48 8d 35 da 2b 00 00 	lea    0x2bda(%rip),%rsi        # 4018 <__TMC_END__>
+    143e:	48 29 fe             	sub    %rdi,%rsi
+    1441:	48 89 f0             	mov    %rsi,%rax
+    1444:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    1448:	48 c1 f8 03          	sar    $0x3,%rax
+    144c:	48 01 c6             	add    %rax,%rsi
+    144f:	48 d1 fe             	sar    $1,%rsi
+    1452:	74 14                	je     1468 <register_tm_clones+0x38>
+    1454:	48 8b 05 9d 2b 00 00 	mov    0x2b9d(%rip),%rax        # 3ff8 <_ITM_registerTMCloneTable>
+    145b:	48 85 c0             	test   %rax,%rax
+    145e:	74 08                	je     1468 <register_tm_clones+0x38>
+    1460:	ff e0                	jmp    *%rax
+    1462:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    1468:	c3                   	ret
+    1469:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000001470 <__do_global_dtors_aux>:
+    1470:	f3 0f 1e fa          	endbr64
+    1474:	80 3d 9d 2b 00 00 00 	cmpb   $0x0,0x2b9d(%rip)        # 4018 <__TMC_END__>
+    147b:	75 2b                	jne    14a8 <__do_global_dtors_aux+0x38>
+    147d:	55                   	push   %rbp
+    147e:	48 83 3d 42 2b 00 00 	cmpq   $0x0,0x2b42(%rip)        # 3fc8 <__cxa_finalize@GLIBC_2.2.5>
+    1485:	00 
+    1486:	48 89 e5             	mov    %rsp,%rbp
+    1489:	74 0c                	je     1497 <__do_global_dtors_aux+0x27>
+    148b:	48 8b 3d 76 2b 00 00 	mov    0x2b76(%rip),%rdi        # 4008 <__dso_handle>
+    1492:	e8 b9 fc ff ff       	call   1150 <__cxa_finalize@plt>
+    1497:	e8 64 ff ff ff       	call   1400 <deregister_tm_clones>
+    149c:	c6 05 75 2b 00 00 01 	movb   $0x1,0x2b75(%rip)        # 4018 <__TMC_END__>
+    14a3:	5d                   	pop    %rbp
+    14a4:	c3                   	ret
+    14a5:	0f 1f 00             	nopl   (%rax)
+    14a8:	c3                   	ret
+    14a9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000014b0 <frame_dummy>:
+    14b0:	f3 0f 1e fa          	endbr64
+    14b4:	e9 77 ff ff ff       	jmp    1430 <register_tm_clones>
+    14b9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000014c0 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0>:
+    14c0:	55                   	push   %rbp
+    14c1:	48 89 e5             	mov    %rsp,%rbp
+    14c4:	53                   	push   %rbx
+    14c5:	48 89 fb             	mov    %rdi,%rbx
+    14c8:	48 83 ec 18          	sub    $0x18,%rsp
+    14cc:	48 8b 07             	mov    (%rdi),%rax
+    14cf:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+    14d3:	48 8b bc 07 f0 00 00 	mov    0xf0(%rdi,%rax,1),%rdi
+    14da:	00 
+    14db:	48 85 ff             	test   %rdi,%rdi
+    14de:	0f 84 7c fc ff ff    	je     1160 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0.cold>
+    14e4:	80 7f 38 00          	cmpb   $0x0,0x38(%rdi)
+    14e8:	74 1a                	je     1504 <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0+0x44>
+    14ea:	0f be 77 43          	movsbl 0x43(%rdi),%esi
+    14ee:	48 89 df             	mov    %rbx,%rdi
+    14f1:	e8 3a fb ff ff       	call   1030 <_ZNSo3putEc@plt>
+    14f6:	48 83 c4 18          	add    $0x18,%rsp
+    14fa:	5b                   	pop    %rbx
+    14fb:	48 89 c7             	mov    %rax,%rdi
+    14fe:	5d                   	pop    %rbp
+    14ff:	e9 6c fb ff ff       	jmp    1070 <_ZNSo5flushEv@plt>
+    1504:	48 89 7d e8          	mov    %rdi,-0x18(%rbp)
+    1508:	e8 d3 fb ff ff       	call   10e0 <_ZNKSt5ctypeIcE13_M_widen_initEv@plt>
+    150d:	48 8b 7d e8          	mov    -0x18(%rbp),%rdi
+    1511:	be 0a 00 00 00       	mov    $0xa,%esi
+    1516:	48 8b 07             	mov    (%rdi),%rax
+    1519:	48 8b 40 30          	mov    0x30(%rax),%rax
+    151d:	48 3b 05 b4 2a 00 00 	cmp    0x2ab4(%rip),%rax        # 3fd8 <_GLOBAL_OFFSET_TABLE_+0xb8>
+    1524:	74 c8                	je     14ee <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0+0x2e>
+    1526:	be 0a 00 00 00       	mov    $0xa,%esi
+    152b:	ff d0                	call   *%rax
+    152d:	0f be f0             	movsbl %al,%esi
+    1530:	eb bc                	jmp    14ee <_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_.isra.0+0x2e>
+    1532:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    1539:	00 00 00 
+    153c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000001540 <_ZNKSt5ctypeIcE8do_widenEc>:
+    1540:	89 f0                	mov    %esi,%eax
+    1542:	31 f6                	xor    %esi,%esi
+    1544:	c3                   	ret
+    1545:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    154c:	00 00 00 
+    154f:	90                   	nop
+
+0000000000001550 <_ZN13mathfunctions4sqrtEd>:
+    1550:	55                   	push   %rbp
+    1551:	66 0f ef c9          	pxor   %xmm1,%xmm1
+    1555:	48 89 e5             	mov    %rsp,%rbp
+    1558:	41 56                	push   %r14
+    155a:	41 55                	push   %r13
+    155c:	41 54                	push   %r12
+    155e:	53                   	push   %rbx
+    155f:	48 83 ec 10          	sub    $0x10,%rsp
+    1563:	66 0f 2f c8          	comisd %xmm0,%xmm1
+    1567:	0f 83 3b 01 00 00    	jae    16a8 <_ZN13mathfunctions4sqrtEd+0x158>
+    156d:	4c 8b 25 6c 2a 00 00 	mov    0x2a6c(%rip),%r12        # 3fe0 <_ZSt4cout@GLIBCXX_3.4>
+    1574:	f2 0f 11 45 d0       	movsd  %xmm0,-0x30(%rbp)
+    1579:	bb 0a 00 00 00       	mov    $0xa,%ebx
+    157e:	f2 0f 11 45 d8       	movsd  %xmm0,-0x28(%rbp)
+    1583:	eb 21                	jmp    15a6 <_ZN13mathfunctions4sqrtEd+0x56>
+    1585:	0f 1f 00             	nopl   (%rax)
+    1588:	41 0f be 75 43       	movsbl 0x43(%r13),%esi
+    158d:	4c 89 f7             	mov    %r14,%rdi
+    1590:	e8 9b fa ff ff       	call   1030 <_ZNSo3putEc@plt>
+    1595:	48 89 c7             	mov    %rax,%rdi
+    1598:	e8 d3 fa ff ff       	call   1070 <_ZNSo5flushEv@plt>
+    159d:	83 eb 01             	sub    $0x1,%ebx
+    15a0:	0f 84 0a 01 00 00    	je     16b0 <_ZN13mathfunctions4sqrtEd+0x160>
+    15a6:	f2 0f 10 4d d8       	movsd  -0x28(%rbp),%xmm1
+    15ab:	66 0f ef c0          	pxor   %xmm0,%xmm0
+    15af:	66 0f 2f c1          	comisd %xmm1,%xmm0
+    15b3:	0f 83 cf 00 00 00    	jae    1688 <_ZN13mathfunctions4sqrtEd+0x138>
+    15b9:	f2 0f 59 4d d8       	mulsd  -0x28(%rbp),%xmm1
+    15be:	f2 0f 10 55 d0       	movsd  -0x30(%rbp),%xmm2
+    15c3:	f2 0f 10 05 cd 0a 00 	movsd  0xacd(%rip),%xmm0        # 2098 <_IO_stdin_used+0x98>
+    15ca:	00 
+    15cb:	4c 89 e7             	mov    %r12,%rdi
+    15ce:	ba 12 00 00 00       	mov    $0x12,%edx
+    15d3:	f2 0f 10 6d d8       	movsd  -0x28(%rbp),%xmm5
+    15d8:	48 8d 35 53 0a 00 00 	lea    0xa53(%rip),%rsi        # 2032 <_IO_stdin_used+0x32>
+    15df:	f2 0f 5c d1          	subsd  %xmm1,%xmm2
+    15e3:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+    15e7:	f2 0f 5e c5          	divsd  %xmm5,%xmm0
+    15eb:	66 0f 28 d8          	movapd %xmm0,%xmm3
+    15ef:	f2 0f 58 dd          	addsd  %xmm5,%xmm3
+    15f3:	f2 0f 11 5d d8       	movsd  %xmm3,-0x28(%rbp)
+    15f8:	e8 d3 fa ff ff       	call   10d0 <_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@plt>
+    15fd:	f2 0f 10 45 d0       	movsd  -0x30(%rbp),%xmm0
+    1602:	4c 89 e7             	mov    %r12,%rdi
+    1605:	e8 16 fb ff ff       	call   1120 <_ZNSo9_M_insertIdEERSoT_@plt>
+    160a:	ba 07 00 00 00       	mov    $0x7,%edx
+    160f:	48 8d 35 2f 0a 00 00 	lea    0xa2f(%rip),%rsi        # 2045 <_IO_stdin_used+0x45>
+    1616:	48 89 c7             	mov    %rax,%rdi
+    1619:	49 89 c5             	mov    %rax,%r13
+    161c:	e8 af fa ff ff       	call   10d0 <_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@plt>
+    1621:	f2 0f 10 45 d8       	movsd  -0x28(%rbp),%xmm0
+    1626:	4c 89 ef             	mov    %r13,%rdi
+    1629:	e8 f2 fa ff ff       	call   1120 <_ZNSo9_M_insertIdEERSoT_@plt>
+    162e:	49 89 c6             	mov    %rax,%r14
+    1631:	48 8b 00             	mov    (%rax),%rax
+    1634:	48 8b 40 e8          	mov    -0x18(%rax),%rax
+    1638:	4d 8b ac 06 f0 00 00 	mov    0xf0(%r14,%rax,1),%r13
+    163f:	00 
+    1640:	4d 85 ed             	test   %r13,%r13
+    1643:	0f 84 ac fb ff ff    	je     11f5 <_ZN13mathfunctions4sqrtEd.cold>
+    1649:	41 80 7d 38 00       	cmpb   $0x0,0x38(%r13)
+    164e:	0f 85 34 ff ff ff    	jne    1588 <_ZN13mathfunctions4sqrtEd+0x38>
+    1654:	4c 89 ef             	mov    %r13,%rdi
+    1657:	e8 84 fa ff ff       	call   10e0 <_ZNKSt5ctypeIcE13_M_widen_initEv@plt>
+    165c:	49 8b 45 00          	mov    0x0(%r13),%rax
+    1660:	be 0a 00 00 00       	mov    $0xa,%esi
+    1665:	48 8b 40 30          	mov    0x30(%rax),%rax
+    1669:	48 3b 05 68 29 00 00 	cmp    0x2968(%rip),%rax        # 3fd8 <_GLOBAL_OFFSET_TABLE_+0xb8>
+    1670:	0f 84 17 ff ff ff    	je     158d <_ZN13mathfunctions4sqrtEd+0x3d>
+    1676:	4c 89 ef             	mov    %r13,%rdi
+    1679:	ff d0                	call   *%rax
+    167b:	0f be f0             	movsbl %al,%esi
+    167e:	e9 0a ff ff ff       	jmp    158d <_ZN13mathfunctions4sqrtEd+0x3d>
+    1683:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+    1688:	f2 0f 10 35 00 0a 00 	movsd  0xa00(%rip),%xmm6        # 2090 <_IO_stdin_used+0x90>
+    168f:	00 
+    1690:	f2 0f 10 0d f0 09 00 	movsd  0x9f0(%rip),%xmm1        # 2088 <_IO_stdin_used+0x88>
+    1697:	00 
+    1698:	f2 0f 11 75 d8       	movsd  %xmm6,-0x28(%rbp)
+    169d:	e9 1c ff ff ff       	jmp    15be <_ZN13mathfunctions4sqrtEd+0x6e>
+    16a2:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    16a8:	48 c7 45 d8 00 00 00 	movq   $0x0,-0x28(%rbp)
+    16af:	00 
+    16b0:	f2 0f 10 45 d8       	movsd  -0x28(%rbp),%xmm0
+    16b5:	48 83 c4 10          	add    $0x10,%rsp
+    16b9:	5b                   	pop    %rbx
+    16ba:	41 5c                	pop    %r12
+    16bc:	41 5d                	pop    %r13
+    16be:	41 5e                	pop    %r14
+    16c0:	5d                   	pop    %rbp
+    16c1:	31 c0                	xor    %eax,%eax
+    16c3:	31 d2                	xor    %edx,%edx
+    16c5:	31 f6                	xor    %esi,%esi
+    16c7:	31 ff                	xor    %edi,%edi
+    16c9:	c3                   	ret
+
+Disassembly of section .fini:
+
+00000000000016cc <_fini>:
+    16cc:	f3 0f 1e fa          	endbr64
+    16d0:	48 83 ec 08          	sub    $0x8,%rsp
+    16d4:	48 83 c4 08          	add    $0x8,%rsp
+    16d8:	c3                   	ret

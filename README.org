@@ -1,0 +1,23 @@
+#+TITLE: CMake: Bibliotecas dinámicas / ABI
+
+* ABI
+
+- ABI (Application Binary Interface) -> "API de bajo nivel"
+
+  Especifica:
+
+   - Calling conventions: cómo se pasan los argumentos, cómo se devuelven los valores...
+   - Name mangling: traducción de nombres a símbolos del linker
+   - Layout de datos: alineamiento, tamaño, padding
+   - Uso de registros: cuáles son de llamante y cuáles son del que llama
+   - Detalles de bibliotecas estándar
+   - Layout de la VTable: estructura de las funciones virtuales
+
+- La ABI de C++ no es estable! No ser lo suficientemente específico en CMake puede provocar inestabilidades de la ABI.
+
+ #+BEGIN_SRC: cmake
+
+set(CMAKE_CXX_COMPILER clang) # clang, g++, msvc...
+
+ #+END_SRC
+

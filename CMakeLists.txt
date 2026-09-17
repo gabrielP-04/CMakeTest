@@ -1,26 +1,16 @@
-# TODO1: Set the minimum required version of CMake to be 3.23
+
 cmake_minimum_required(VERSION 3.23)
 
-# TODO2: Create a project named Tutorial
+# a la ABI le afecta el compilador y la arquitectura
+set(CMAKE_CXX_COMPILER g++) # clang, g++, msvc...
+set(CMAKE_SYSTEM_PROCESSOR x86_64) # x86_64, x86, x64, armvh7, armel7...
+
+# el tipo de build y el runtime puede afectar a la ABI igual
+set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
+
 project(Tutorial)
 
-# TODO3: Add an executable target called Tutorial to the project
-
-# TODO4: Add the Tutorial/Tutorial.cxx source file to the Tutorial target
-
-# TODO7: Add the MathFunctions library as a linked dependency
-#        to the Tutorial target
-
-# TODO11: Add the Tutorial subdirectory to the project
 add_subdirectory(Tutorial)
 
-# TODO5: Add a library target called MathFunctions to the project
-
-# TODO6: Add the source and header file located in Step1/MathFunctions to the
-#        MathFunctions target, note that the intended way to include the
-#        MathFunctions header is:
-#          #include <MathFunctions.h>
-
-
-# TODO13: Add the MathFunctions subdirectory to the project
 add_subdirectory(MathFunctions)
